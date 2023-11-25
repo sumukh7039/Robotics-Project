@@ -1,0 +1,410 @@
+<?xml version="1.0" ?>
+<robot name="RIVO" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find RIVO_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find RIVO_description)/urdf/RIVO.trans" />
+<xacro:include filename="$(find RIVO_description)/urdf/RIVO.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.0028948644801508917 0.0004061893631920199 -0.06237868835414986" rpy="0 0 0"/>
+    <mass value="2.3408931898157137"/>
+    <inertia ixx="0.004521" iyy="0.004886" izz="0.00607" ixy="4e-06" iyz="-9e-06" ixz="5.9e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://RIVO_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://RIVO_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_2_1">
+  <inertial>
+    <origin xyz="0.0020835623132613285 -0.003064482171297948 0.019940090429391336" rpy="0 0 0"/>
+    <mass value="0.688307702528786"/>
+    <inertia ixx="0.000549" iyy="0.000566" izz="0.000619" ixy="6e-06" iyz="1.3e-05" ixz="-6.5e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="3.5e-05 -1.6e-05 2e-06" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://RIVO_description/meshes/link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="3.5e-05 -1.6e-05 2e-06" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://RIVO_description/meshes/link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_4_1">
+  <inertial>
+    <origin xyz="0.08125834087790981 -0.001122555428102228 0.00029418621949284934" rpy="0 0 0"/>
+    <mass value="0.46578916720940555"/>
+    <inertia ixx="6.1e-05" iyy="0.001753" izz="0.001704" ixy="-4.8e-05" iyz="-0.0" ixz="-1.2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.231507 0.019199 -0.039643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://RIVO_description/meshes/link_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.231507 0.019199 -0.039643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://RIVO_description/meshes/link_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gripper_part_12_1">
+  <inertial>
+    <origin xyz="0.012456635259577353 0.009213868537273885 0.0020449037369226486" rpy="0 0 0"/>
+    <mass value="0.006270284943512531"/>
+    <inertia ixx="0.0" iyy="1e-06" izz="1e-06" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.484567 -0.00431 -0.055238" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://RIVO_description/meshes/gripper_part_12_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.484567 -0.00431 -0.055238" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://RIVO_description/meshes/gripper_part_12_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gripper_part_4_1">
+  <inertial>
+    <origin xyz="0.013134263289696746 -0.008251164752194744 0.0019147897203106931" rpy="0 0 0"/>
+    <mass value="0.006270284943499826"/>
+    <inertia ixx="0.0" iyy="1e-06" izz="1e-06" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.484828 0.005686 -0.055163" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://RIVO_description/meshes/gripper_part_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.484828 0.005686 -0.055163" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://RIVO_description/meshes/gripper_part_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gripper_part_8_1">
+  <inertial>
+    <origin xyz="0.0105618667457274 0.007870370761826763 -0.004894936320047574" rpy="0 0 0"/>
+    <mass value="0.007386988595910961"/>
+    <inertia ixx="0.0" iyy="1e-06" izz="1e-06" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.484556 -0.004351 -0.049669" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://RIVO_description/meshes/gripper_part_8_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.484556 -0.004351 -0.049669" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://RIVO_description/meshes/gripper_part_8_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gripper_part_2_1">
+  <inertial>
+    <origin xyz="-0.00036726587359098284 0.01348177608821506 -0.008550972042145076" rpy="0 0 0"/>
+    <mass value="0.05700410540308347"/>
+    <inertia ixx="6e-06" iyy="4e-06" izz="3e-06" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.464814 0.006035 -0.045128" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://RIVO_description/meshes/gripper_part_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.464814 0.006035 -0.045128" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://RIVO_description/meshes/gripper_part_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gripper_part_9_1">
+  <inertial>
+    <origin xyz="0.005021384222760938 -0.0025433255854703136 0.003471513807427669" rpy="0 0 0"/>
+    <mass value="0.0362891624976011"/>
+    <inertia ixx="3e-06" iyy="4e-06" izz="6e-06" ixy="2e-06" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.465043 0.014202 -0.054568" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://RIVO_description/meshes/gripper_part_9_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.465043 0.014202 -0.054568" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://RIVO_description/meshes/gripper_part_9_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gripper_part_10_1">
+  <inertial>
+    <origin xyz="-0.014598965910585904 0.008272324580325768 8.800201478370573e-05" rpy="0 0 0"/>
+    <mass value="0.05700410540308428"/>
+    <inertia ixx="4e-06" iyy="3e-06" izz="6e-06" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.444042 0.006395 -0.040664" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://RIVO_description/meshes/gripper_part_10_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.444042 0.006395 -0.040664" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://RIVO_description/meshes/gripper_part_10_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gripper_part_1_1">
+  <inertial>
+    <origin xyz="0.036423386056162965 0.011494519998513543 0.006746851708180859" rpy="0 0 0"/>
+    <mass value="0.1054118615130382"/>
+    <inertia ixx="1.9e-05" iyy="4.8e-05" izz="5.5e-05" ixy="-1e-05" iyz="-3e-06" ixz="-9e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.416441 0.014369 -0.040656" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://RIVO_description/meshes/gripper_part_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.416441 0.014369 -0.040656" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://RIVO_description/meshes/gripper_part_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gripper_part_6_1">
+  <inertial>
+    <origin xyz="0.010217406066357015 -0.0017233499857305587 0.004218909480987874" rpy="0 0 0"/>
+    <mass value="0.04741956072106952"/>
+    <inertia ixx="1e-06" iyy="1.9e-05" izz="2e-05" ixy="-3e-06" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.511072 0.022091 -0.045923" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://RIVO_description/meshes/gripper_part_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.511072 0.022091 -0.045923" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://RIVO_description/meshes/gripper_part_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gripper_part_7_1">
+  <inertial>
+    <origin xyz="0.011136128559519176 -0.00695448952174929 -0.005005307666391845" rpy="0 0 0"/>
+    <mass value="0.007386988595910908"/>
+    <inertia ixx="0.0" iyy="1e-06" izz="1e-06" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.484818 0.005645 -0.049594" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://RIVO_description/meshes/gripper_part_7_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.484818 0.005645 -0.049594" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://RIVO_description/meshes/gripper_part_7_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gripper_part_3_1">
+  <inertial>
+    <origin xyz="-0.01973607073111644 -0.01515006847613012 0.0025168446301002192" rpy="0 0 0"/>
+    <mass value="0.02397572621792568"/>
+    <inertia ixx="2e-06" iyy="2e-06" izz="4e-06" ixy="-1e-06" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.489201 -0.031312 -0.055429" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://RIVO_description/meshes/gripper_part_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.489201 -0.031312 -0.055429" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://RIVO_description/meshes/gripper_part_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gripper_part_5_1">
+  <inertial>
+    <origin xyz="0.010187463177970035 0.0018070450955312463 -0.004255435248756587" rpy="0 0 0"/>
+    <mass value="0.0474195607210694"/>
+    <inertia ixx="1e-06" iyy="1.9e-05" izz="2e-05" ixy="3e-06" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.509473 -0.022767 -0.055328" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://RIVO_description/meshes/gripper_part_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.509473 -0.022767 -0.055328" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://RIVO_description/meshes/gripper_part_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_3_1">
+  <inertial>
+    <origin xyz="0.08880680552106907 0.006923559791520796 -0.0017422533632876491" rpy="0 0 0"/>
+    <mass value="0.6955411833829301"/>
+    <inertia ixx="0.000129" iyy="0.003467" izz="0.003356" ixy="-5.6e-05" iyz="1e-06" ixz="-6e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.014479 0.022897 -0.040106" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://RIVO_description/meshes/link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.014479 0.022897 -0.040106" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://RIVO_description/meshes/link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="dof_1" type="continuous">
+  <origin xyz="-3.5e-05 1.6e-05 -2e-06" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="link_2_1"/>
+  <axis xyz="2.3e-05 0.007455 -0.999972"/>
+</joint>
+
+<joint name="dof_3" type="continuous">
+  <origin xyz="0.217028 0.003698 -0.000463" rpy="0 0 0"/>
+  <parent link="link_3_1"/>
+  <child link="link_4_1"/>
+  <axis xyz="0.026148 -0.99963 -0.007452"/>
+</joint>
+
+<joint name="Rigid 6" type="fixed">
+  <origin xyz="0.068126 0.018679 0.014582" rpy="0 0 0"/>
+  <parent link="gripper_part_1_1"/>
+  <child link="gripper_part_12_1"/>
+</joint>
+
+<joint name="Rigid 9" type="fixed">
+  <origin xyz="0.068387 0.008683 0.014507" rpy="0 0 0"/>
+  <parent link="gripper_part_1_1"/>
+  <child link="gripper_part_4_1"/>
+</joint>
+
+<joint name="Rigid 10" type="fixed">
+  <origin xyz="0.068115 0.01872 0.009013" rpy="0 0 0"/>
+  <parent link="gripper_part_1_1"/>
+  <child link="gripper_part_8_1"/>
+</joint>
+
+<joint name="Rigid 13" type="fixed">
+  <origin xyz="0.048373 0.008334 0.004472" rpy="0 0 0"/>
+  <parent link="gripper_part_1_1"/>
+  <child link="gripper_part_2_1"/>
+</joint>
+
+<joint name="Rigid 14" type="fixed">
+  <origin xyz="0.048602 0.000167 0.013912" rpy="0 0 0"/>
+  <parent link="gripper_part_1_1"/>
+  <child link="gripper_part_9_1"/>
+</joint>
+
+<joint name="Rigid 16" type="fixed">
+  <origin xyz="0.027601 0.007974 8e-06" rpy="0 0 0"/>
+  <parent link="gripper_part_1_1"/>
+  <child link="gripper_part_10_1"/>
+</joint>
+
+<joint name="dof_4" type="continuous">
+  <origin xyz="0.184934 0.00483 0.001013" rpy="0 0 0"/>
+  <parent link="link_4_1"/>
+  <child link="gripper_part_1_1"/>
+  <axis xyz="-0.026148 0.99963 0.007452"/>
+</joint>
+
+<joint name="Rigid 18" type="fixed">
+  <origin xyz="0.026254 -0.016446 -0.003671" rpy="0 0 0"/>
+  <parent link="gripper_part_7_1"/>
+  <child link="gripper_part_6_1"/>
+</joint>
+
+<joint name="Rigid 19" type="fixed">
+  <origin xyz="0.068377 0.008724 0.008938" rpy="0 0 0"/>
+  <parent link="gripper_part_1_1"/>
+  <child link="gripper_part_7_1"/>
+</joint>
+
+<joint name="Rigid 21" type="fixed">
+  <origin xyz="-0.020272 0.008545 0.000101" rpy="0 0 0"/>
+  <parent link="gripper_part_5_1"/>
+  <child link="gripper_part_3_1"/>
+</joint>
+
+<joint name="Rigid 22" type="fixed">
+  <origin xyz="0.024906 0.018457 9e-05" rpy="0 0 0"/>
+  <parent link="gripper_part_12_1"/>
+  <child link="gripper_part_5_1"/>
+</joint>
+
+<joint name="dof_2" type="continuous">
+  <origin xyz="0.014514 -0.022913 0.040108" rpy="0 0 0"/>
+  <parent link="link_2_1"/>
+  <child link="link_3_1"/>
+  <axis xyz="0.026148 -0.99963 -0.007452"/>
+</joint>
+
+</robot>
