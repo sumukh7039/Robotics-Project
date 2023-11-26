@@ -5,6 +5,7 @@
 
 <gazebo>
   <plugin name="control" filename="libgazebo_ros_control.so"/>
+  <!-- <robotNamespace>/MYROBOT</robotNamespace> -->
 </gazebo>
 <gazebo reference="base_link">
   <material>${body_color}</material>
