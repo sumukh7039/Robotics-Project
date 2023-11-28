@@ -17,7 +17,7 @@
     <inertial>
       <origin xyz="0.002894864480150963 0.0004061893631920555 0.029121311645850093" rpy="0 0 0"/>
       <mass value="100.3408931898157137"/>
-      <inertia ixx="0.4521" iyy="0.4886" izz="0.607" ixy="4e-04" iyz="-9e-04" ixz="5.9e-03"/>
+      <inertia ixx="45.21" iyy="48.86" izz="60.7" ixy="4e-02" iyz="-9e-02" ixz="5.9e-01"/>
     </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -333,7 +333,7 @@
     <parent link="base_link"/>
     <child link="link_2_1"/>
     <axis xyz="2.3e-05 0.007455 -0.999972"/>
-    <limit lower="0" upper="3.142" effort="300" velocity="3"/>
+    <limit lower="-1.57" upper="1.57" effort="300" velocity="3"/>
   </joint>
 
   <joint name="dof_2" type="revolute">
@@ -341,7 +341,7 @@
     <parent link="link_2_1"/>
     <child link="link_3_1"/>
     <axis xyz="0.026148 -0.99963 -0.007452"/>
-    <limit lower="0" upper="3.142" effort="300" velocity="3"/>
+    <limit lower="-1.57" upper="1.57" effort="300" velocity="3"/>
   </joint>
 
 
@@ -350,15 +350,15 @@
     <parent link="link_3_1"/>
     <child link="link_4_1"/>
     <axis xyz="0.026148 -0.99963 -0.007452"/>
-    <limit lower="0" upper="3.142" effort="300" velocity="3"/>
+    <limit lower="-3.142" upper="0" effort="300" velocity="3"/>
   </joint>
 
   <joint name="dof_4" type="revolute">
     <origin xyz="0.184934 0.00483 0.001013" rpy="0 0 0"/>
     <parent link="link_4_1"/>
     <child link="g_part_1_1"/>
-    <axis xyz="-0.026148 0.99963 0.007452"/>
-    <limit lower="0" upper="3.142" effort="300" velocity="3"/>
+    <axis xyz="0.026148 -0.99963 -0.007452"/>
+    <limit lower="-3.142" upper="3.142" effort="300" velocity="3"/>
   </joint>
 
   <joint name="Rigid 6" type="fixed">

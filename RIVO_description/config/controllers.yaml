@@ -6,7 +6,7 @@ joint_state_controller:
 dof_1_control: 
   type: effort_controllers/JointPositionController
   joint: dof_1
-  pid: {p: 1000.0 , i: 0.01 , d: 0.0}
+  pid: {p: 100.0 , i: 0.1 , d: 10.0}
 
 # Controller 2
 dof_2_control:
@@ -22,4 +22,4 @@ dof_3_control:
 dof_4_control:
   type: effort_controllers/JointPositionController
   joint: dof_4
-  pid: {p: 100.0 , i: 0.0, d: 1.0}
+  pid: {p: 1000.0 , i: 0.0, d: 0.0}
