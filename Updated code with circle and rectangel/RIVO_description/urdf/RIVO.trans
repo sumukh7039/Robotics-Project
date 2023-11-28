@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<robot name="RIVO" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<transmission name="dof_1_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="dof_1">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="dof_1_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="dof_3_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="dof_3">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="dof_3_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="dof_4_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="dof_4">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="dof_4_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="dof_2_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="dof_2">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="dof_2_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>

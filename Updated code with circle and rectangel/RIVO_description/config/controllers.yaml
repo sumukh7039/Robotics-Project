@@ -1,0 +1,25 @@
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
+
+# Controller 1
+dof_1_control: 
+  type: effort_controllers/JointPositionController
+  joint: dof_1
+  pid: {p: 100.0 , i: 0.1 , d: 10.0}
+
+# Controller 2
+dof_2_control:
+  type: effort_controllers/JointPositionController
+  joint: dof_2
+  pid: {p: 1000.0 , i: 0.0 , d: 1.1}
+
+dof_3_control:
+  type: effort_controllers/JointPositionController
+  joint: dof_3
+  pid: {p: 1000.0 , i: 0.0 , d: 1.0}
+
+dof_4_control:
+  type: effort_controllers/JointPositionController
+  joint: dof_4
+  pid: {p: 1000.0 , i: 0.0, d: 0.0}
