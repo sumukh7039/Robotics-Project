@@ -60,6 +60,23 @@ A3 = getTransformationMatrix(theta3, d3, a3, alpha3)
 A4 = getTransformationMatrix(theta4, d4, a4, alpha4)
 T = A1 * A2 * A3 * A4
 
+# Define symbols for matrix entries
+a11, a12, a13, a14 = symbols('a11 a12 a13 a14')
+a21, a22, a23, a24 = symbols('a21 a22 a23 a24')
+a31, a32, a33, a34 = symbols('a31 a32 a33 a34')
+a41, a42, a43, a44 = symbols('a41 a42 a43 a44')
+
+# Create a 4x4 matrix
+matrix = Matrix([
+    [a11, a12, a13, a14],
+    [a21, a22, a23, a24],
+    [a31, a32, a33, a34],
+    [a41, a42, a43, a44]
+])
+
+# Display the matrix in a beautified manner
+pprint(matrix)
+
 # Split the matrix into individual coefficients
 a11, a12, a13, a14 = T[0, 0], T[0, 1], T[0, 2], T[0, 3]
 a21, a22, a23, a24 = T[1, 0], T[1, 1], T[1, 2], T[1, 3]

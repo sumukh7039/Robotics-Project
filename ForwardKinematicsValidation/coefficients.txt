@@ -1,16 +1,43 @@
+The Final Transformation Matrix is:
+
+⎡a₁₁  a₁₂  a₁₃  a₁₄⎤
+⎢                  ⎥
+⎢a₂₁  a₂₂  a₂₃  a₂₄⎥
+⎢                  ⎥
+⎢a₃₁  a₃₂  a₃₃  a₃₄⎥
+⎢                  ⎥
+⎣a₄₁  a₄₂  a₄₃  a₄₄⎦
+
+Where the following terms are:
+
 a11: (-sin(theta2)*sin(theta3)*cos(theta1) + cos(theta1)*cos(theta2)*cos(theta3))*cos(theta4) + (-sin(theta2)*cos(theta1)*cos(theta3) - sin(theta3)*cos(theta1)*cos(theta2))*sin(theta4)
+
 a12: -(-sin(theta2)*sin(theta3)*cos(theta1) + cos(theta1)*cos(theta2)*cos(theta3))*sin(theta4) + (-sin(theta2)*cos(theta1)*cos(theta3) - sin(theta3)*cos(theta1)*cos(theta2))*cos(theta4)
+
 a13: -sin(theta1)
+
 a14: 145.6*(-sin(theta2)*sin(theta3)*cos(theta1) + cos(theta1)*cos(theta2)*cos(theta3))*cos(theta4) + 145.6*(-sin(theta2)*cos(theta1)*cos(theta3) - sin(theta3)*cos(theta1)*cos(theta2))*sin(theta4) - 185*sin(theta2)*sin(theta3)*cos(theta1) + 185*cos(theta1)*cos(theta2)*cos(theta3) + 217*cos(theta1)*cos(theta2)
+
 a21: (-sin(theta1)*sin(theta2)*sin(theta3) + sin(theta1)*cos(theta2)*cos(theta3))*cos(theta4) + (-sin(theta1)*sin(theta2)*cos(theta3) - sin(theta1)*sin(theta3)*cos(theta2))*sin(theta4)
+
 a22: -(-sin(theta1)*sin(theta2)*sin(theta3) + sin(theta1)*cos(theta2)*cos(theta3))*sin(theta4) + (-sin(theta1)*sin(theta2)*cos(theta3) - sin(theta1)*sin(theta3)*cos(theta2))*cos(theta4)
+
 a23: cos(theta1)
+
 a24: 145.6*(-sin(theta1)*sin(theta2)*sin(theta3) + sin(theta1)*cos(theta2)*cos(theta3))*cos(theta4) + 145.6*(-sin(theta1)*sin(theta2)*cos(theta3) - sin(theta1)*sin(theta3)*cos(theta2))*sin(theta4) - 185*sin(theta1)*sin(theta2)*sin(theta3) + 185*sin(theta1)*cos(theta2)*cos(theta3) + 217*sin(theta1)*cos(theta2)
+
 a31: (sin(theta2)*sin(theta3) - cos(theta2)*cos(theta3))*sin(theta4) + (-sin(theta2)*cos(theta3) - sin(theta3)*cos(theta2))*cos(theta4)
+
 a32: (sin(theta2)*sin(theta3) - cos(theta2)*cos(theta3))*cos(theta4) - (-sin(theta2)*cos(theta3) - sin(theta3)*cos(theta2))*sin(theta4)
+
 a33: 0
+
 a34: 145.6*(sin(theta2)*sin(theta3) - cos(theta2)*cos(theta3))*sin(theta4) + 145.6*(-sin(theta2)*cos(theta3) - sin(theta3)*cos(theta2))*cos(theta4) - 185*sin(theta2)*cos(theta3) - 217*sin(theta2) - 185*sin(theta3)*cos(theta2) + 1319
+
 a41: 0
+
 a42: 0
+
 a43: 0
+
 a44: 1
