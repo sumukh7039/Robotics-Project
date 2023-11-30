@@ -39,7 +39,7 @@ d2 = 0
 d3 = 0
 d4 = 0
 
-alpha1 = pi/2
+alpha1 = -pi/2
 alpha2 = 0
 alpha3 = 0
 alpha4 = 0
@@ -58,10 +58,10 @@ for i in range(4):
     print()
 
 # 2nd validation
-theta1_deg = 30  
-theta2_deg = 45  
-theta3_deg = -60  
-theta4_deg = 90  
+theta1_deg = 0
+theta2_deg = -45 
+theta3_deg = -45  
+theta4_deg = -45 
 
 # Convert angles to radians
 theta1 = np.radians(theta1_deg)
@@ -80,10 +80,10 @@ for i in range(4):
     print()
 
 # 3rd validation
-theta1_deg = -15  
-theta2_deg = 60  
-theta3_deg = 30  
-theta4_deg = -45  
+theta1_deg = 90 
+theta2_deg = -45  
+theta3_deg = +45  
+theta4_deg = +45  
 
 # Convert angles to radians
 theta1 = np.radians(theta1_deg)
@@ -105,14 +105,12 @@ for i in range(4):
 """
 robot = 
  
-RRRR-Example:: 4 axis, RRRR, stdDH, slowRNE                      
-+---+-----------+-----------+-----------+-----------+-----------+
-| j |     theta |         d |         a |     alpha |    offset |
-+---+-----------+-----------+-----------+-----------+-----------+
-|  1|         q1|      1.319|          0|     1.5708|          0|
-|  2|         q2|          0|       2.17|          0|          0|
-|  3|         q3|          0|       1.85|          0|          0|
-|  4|         q4|          0|      1.456|          0|          0|
-+---+-----------+-----------+-----------+-----------+-----------+
- 
+%+---+-----------+-----------+-----------+-----------+
+%| j |     theta |         d |         a |     alpha | 
+%+---+-----------+-----------+-----------+-----------+
+%|  1|         q1|     +1.319|          0|    -1.5708|
+%|  2|         q2|          0|       2.17|          0|
+%|  3|         q3|          0|       1.85|          0|
+%|  4|         q4|          0|      1.456|          0|
+%+---+-----------+-----------+-----------+-----------+
  """
